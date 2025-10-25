@@ -5,40 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinMeow | Registro</title>
     <link rel="stylesheet" href="registrarse.css">
-    <script defer src="verContrasenaRegistro.js"></script>
+    <script defer src="verContrsenaRegistro.js"></script>
 </head>
 <body>
-    <div class="formulario">
-        <h1>Registro</h1>
-        <form method="post">
-            <div class="inputBox">
-                <input type="text" required>
-                <label>Nombre completo</label>
-            </div>
+    <div class="pantalla">
+        <header>
+            <h1>FinMeow</h1>
+        </header>
 
-            <div class="inputBox">
-                <input type="email" required>
-                <label>Correo electrónico</label>
-            </div>
+        <main>
+            <h2>Crear cuenta</h2>
+            <form method="post" class="formulario">
+                <div class="inputBox">
+                    <input type="text" required>
+                    <label>Nombre completo</label>
+                </div>
 
-            <div class="inputBox passwordBox">
-                <input type="password" id="password" required>
-                <label>Contraseña</label>
-                <button type="button" id="togglePassword" class="ver-btn">👁️</button>
-            </div>
+                <div class="inputBox">
+                    <input type="email" required>
+                    <label>Correo electrónico</label>
+                </div>
 
-            <div class="inputBox passwordBox">
-                <input type="password" id="confirmPassword" required>
-                <label>Confirmar contraseña</label>
-                <button type="button" id="toggleConfirmPassword" class="ver-btn">👁️</button>
-            </div>
+                <div class="inputBox passwordBox">
+                    <input type="password" id="password" required>
+                    <label>Contraseña</label>
+                    <button type="button" id="togglePassword" class="ver-btn">👁️</button>
+                </div>
 
-            <input type="submit" value="Registrarse">
+                <div class="inputBox passwordBox">
+                    <input type="password" id="confirmPassword" required>
+                    <label>Confirmar contraseña</label>
+                    <button type="button" id="toggleConfirmPassword" class="ver-btn">👁️</button>
+                </div>
 
-            <div class="registrarse">
-                ¿Ya tienes cuenta? <a href="InicioSesion.html">Inicia sesión</a>
-            </div>
-        </form>
+                <input type="submit" value="Registrarse">
+
+                <div class="registrarse">
+                    ¿Ya tienes cuenta? <a href="InicioSesion.html">Inicia sesión</a>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>🐾 FinMeow © 2025</p>
+        </footer>
     </div>
 </body>
 </html>
