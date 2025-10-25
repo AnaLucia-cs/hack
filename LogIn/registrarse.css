@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg,#7290a7,#a4dcf4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    background: #fff;
+    width: 400px;
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.formulario h1 {
+    color: #6C3483;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Campos */
+.inputBox {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px 35px 10px 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: #999;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.inputBox input:focus,
+.inputBox input:valid {
+    border-bottom: 2px solid #6C3483;
+}
+
+.inputBox input:focus + label,
+.inputBox input:valid + label {
+    top: -15px;
+    left: 0;
+    color: #6C3483;
+    font-size: 13px;
+}
+
+/* Botones de ver contraseña */
+.passwordBox .ver-btn {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #6C3483;
+    outline: none;
+    transition: 0.3s;
+}
+
+.passwordBox .ver-btn:hover {
+    color: #58d68d;
+    transform: scale(1.1);
+}
+
+/* Botón principal */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #6C3483;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #58d68d;
+}
+
+/* Enlace */
+.registrarse {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #444;
+}
+
+.registrarse a {
+    color: #6C3483;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.registrarse a:hover {
+    text-decoration: underline;
+}

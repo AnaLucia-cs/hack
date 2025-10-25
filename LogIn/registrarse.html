@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinMeow | Registro</title>
+    <link rel="stylesheet" href="registrarse.css">
+    <script defer src="verContrasenaRegistro.js"></script>
+</head>
+<body>
+    <div class="formulario">
+        <h1>Registro</h1>
+        <form method="post">
+            <div class="inputBox">
+                <input type="text" required>
+                <label>Nombre completo</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="email" required>
+                <label>Correo electrónico</label>
+            </div>
+
+            <div class="inputBox passwordBox">
+                <input type="password" id="password" required>
+                <label>Contraseña</label>
+                <button type="button" id="togglePassword" class="ver-btn">👁️</button>
+            </div>
+
+            <div class="inputBox passwordBox">
+                <input type="password" id="confirmPassword" required>
+                <label>Confirmar contraseña</label>
+                <button type="button" id="toggleConfirmPassword" class="ver-btn">👁️</button>
+            </div>
+
+            <input type="submit" value="Registrarse">
+
+            <div class="registrarse">
+                ¿Ya tienes cuenta? <a href="InicioSesion.html">Inicia sesión</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
