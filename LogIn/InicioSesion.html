@@ -8,31 +8,40 @@
     <script defer src="verContrasena.js"></script>
 </head>
 <body>
-    <div class="formulario">
-        <h1>Iniciar Sesión</h1>
-        <form method="post">
-            <div class="inputBox">
-                <input type="text" required>
-                <label>Nombre de usuario</label>
-            </div>
+    <div class="pantalla">
+        <header>
+            <h1>FinMeow</h1>
+        </header>
 
-             <div class="inputBox passwordBox">
-                <input type="password" id="password" required>
-                <label>Contraseña</label>
-                <button type="button" id="togglePassword" class="ver-btn">👁️</button>
-            </div>
+        <main>
+            <h2>Iniciar Sesión</h2>
+            <form method="post" class="formulario">
+                <div class="inputBox">
+                    <input type="text" required>
+                    <label>Nombre de usuario</label>
+                </div>
 
-            <div class="recordar">
-                <a href="#">¿Olvidaste tu contraseña?</a>
-            </div>
+                <div class="inputBox passwordBox">
+                    <input type="password" id="password" required>
+                    <label>Contraseña</label>
+                    <button type="button" id="togglePassword" class="ver-btn">👁️</button>
+                </div>
 
-            <input type="submit" value="Entrar">
+                <div class="recordar">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
 
-            <div class="registrarse">
-                ¿No tienes cuenta? <a href="registrarse.html">Regístrate aquí</a>
-            </div>
-        </form>
+                <input type="submit" value="Entrar">
+
+                <div class="registrarse">
+                    ¿No tienes cuenta? <a href="registrarse.html">Regístrate aquí</a>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>🐾 FinMeow © 2025</p>
+        </footer>
     </div>
 </body>
 </html>
-
