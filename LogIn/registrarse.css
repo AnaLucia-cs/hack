@@ -2,38 +2,62 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(90deg,#7290a7,#a4dcf4);
-    height: 100vh;
+    background: #f3f3f3;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
-.formulario{
-    background: #fff;
-    width: 400px;
-    padding: 40px 35px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+/* Simula la pantalla de un celular */
+.pantalla {
+    width: 380px;
+    height: 700px;
+    background: linear-gradient(90deg,#7290a7,#a4dcf4);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+/* Encabezado */
+header {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 25px 0 10px;
     text-align: center;
-    animation: fadeIn 0.8s ease;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+header h1 {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
 }
 
-.formulario h1 {
+/* Contenido principal */
+main {
+    background: #fff;
+    color: #333;
+    border-radius: 25px 25px 0 0;
+    padding: 30px 25px 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 25px;
     color: #6C3483;
-    margin-bottom: 30px;
-    font-size: 28px;
 }
 
 /* Campos */
 .inputBox {
     position: relative;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .inputBox input {
@@ -70,7 +94,7 @@ body {
     font-size: 13px;
 }
 
-/* Botones de ver contraseña */
+/* Botón de ojo 👁️ */
 .passwordBox .ver-btn {
     position: absolute;
     right: 5px;
@@ -89,7 +113,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Botón principal */
+/* Botón de registro */
 input[type="submit"] {
     width: 100%;
     padding: 12px;
@@ -106,11 +130,11 @@ input[type="submit"]:hover {
     background: #58d68d;
 }
 
-/* Enlace */
+/* Texto de abajo */
 .registrarse {
     margin-top: 25px;
     font-size: 15px;
-    color: #444;
+    text-align: center;
 }
 
 .registrarse a {
@@ -122,3 +146,18 @@ input[type="submit"]:hover {
 .registrarse a:hover {
     text-decoration: underline;
 }
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    background: rgba(0,0,0,0.05);
+    color: white;
+}
+
+
+.registrarse a:hover {
+    text-decoration: underline;
+}
+
