@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auditorías</title>
+  <link rel="stylesheet" href="auditoria.css" />
+</head>
+<body>
+     <div class="app-container">
+    <header class="app-header">Modo Auditoría</header>
+
+    <main class="audit-box">
+      <section class="audit-section">
+        <h2>Capacidad de endeudamiento</h2>
+        <label for="credito">Línea de crédito:</label>
+        <input type="number" id="credito" placeholder="$0.00" />
+
+        <label for="utilidad">Utilidad mensual:</label>
+        <input type="number" id="utilidad" placeholder="$0.00" />
+
+        <button onclick="calcularCapacidad()">Calcular capacidad</button>
+        <div id="resultadoCapacidad"></div>
+      </section>
+
+      <section class="audit-section">
+        <h2>Fecha meta</h2>
+        <label for="usoTarjeta">Uso de tarjeta (%):</label>
+        <input type="number" id="usoTarjeta" placeholder="Ej. 30" />
+
+        <label for="diferencia">Diferencia esperada:</label>
+        <input type="number" id="diferencia" placeholder="Ej. 90" />
+
+        <button onclick="calcularMeta()">Calcular proyección</button>
+        <div id="resultadoMeta"></div>
+        <button onclick="goHome()">🏠 Inicio</button>
+      </section>
+    </main>
+
+    <script src="auditoria.js"></script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetivos</title>
+  <link rel="stylesheet" href="objetivos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <script src="objetivos.js"></script>
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>🎯 Objetivos</h1>
+
+    <div class="progreso">
+      <div class="circulo activo"></div>
+      <div class="linea"></div>
+      <div class="circulo"></div>
+      <div class="linea"></div>
+      <div class="circulo"></div>
+      <div class="linea"></div>
+      <div class="circulo final"></div>
+      <span class="etiqueta">🐾 Gato</span>
+    </div>
+
+    <div class="formulario">
+      <label>¿Qué quieres lograr?</label>
+      <input type="text" id="objetivo" placeholder="Ej. Ahorrar para un viaje">
+
+      <div class="fila">
+        <input type="number" id="monto" placeholder="Monto total ($)">
+        <input type="number" id="meses" placeholder="Meses para lograrlo">
+      </div>
+
+      <label>¿Terminar antes de?</label>
+      <div class="meses">
+        <button class="mes">Sep</button>
+        <button class="mes">Oct</button>
+        <button class="mes">Nov</button>
+        <button class="mes">Dic</button>
+      </div>
+
+      <div class="tarjetas">
+        <label>Tarjetas:</label>
+        <input type="text" id="tarjeta" placeholder="Ej. Visa - 50%">
+        <p class="nota">Indica en qué tarjetas y qué % del ahorro se reflejará</p>
+      </div>
+
+      <button class="btn" onclick="mostrarResumen()">💾 Guardar objetivo</button>
+      <p></p>
+      <button onclick="goHome()" class="btn">🏠 Inicio</button>
+    </div>
+
+    <div class="resultado" id="resultado"></div>
+    
+  </div>
+</body>
+</html>

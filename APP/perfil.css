@@ -1,0 +1,151 @@
+/* === Reset básico y body centrado === */
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.cat-icon {
+  font-size: 64px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.bowtie {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transition: translateX(-50%);
+  font-size: 24px;
+}
+
+/* === Contenedor principal === */
+.app-container {
+  background: linear-gradient(90deg, #c7a7ff, #d9def3, #e9d9ff);
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 420px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* === Header === */
+.app-header {
+  background-color: #b497ff;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding: 16px;
+  font-weight: bold;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(180, 151, 255, 0.3);
+}
+
+/* === Caja principal === */
+.profile-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* === Título y mascota === */
+.profile-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6a4ba8;
+  text-align: center;
+}
+
+.cat-icon {
+  font-size: 50px;
+}
+
+.bowtie {
+  font-size: 24px;
+  vertical-align: top;
+  margin-left: -10px;
+}
+
+/* === Botones === */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+.button-group button {
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.button-group button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+}
+
+.button-group button:hover::before {
+  left: 120%;
+}
+
+/* === Botón primario y secundario === */
+.btn-primary {
+  background: linear-gradient(135deg, #b497ff, #9d7aff);
+  box-shadow: 0 4px 10px rgba(155, 100, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #a882ff, #8b63ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(140, 90, 255, 0.35);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #d8b7ff, #b497ff);
+  box-shadow: 0 4px 8px rgba(150, 100, 255, 0.25);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #b497ff, #a57cff);
+  transform: translateY(-2px);
+}
+
+.btn-dark {
+  background: linear-gradient(135deg, #9a65d4, #7b3fcc); /* más oscuro */
+  box-shadow: 0 4px 10px rgba(120, 60, 200, 0.3);
+  color: white;
+}
+
+.btn-dark:hover {
+  background: linear-gradient(135deg, #7b3fcc, #6029b0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(100, 40, 180, 0.35);
+}

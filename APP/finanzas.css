@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal */
+.app-container {
+  background: linear-gradient(90deg, #c7a7ff, #d9def3, #e9d9ff);
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 420px;
+  height: 90vh;
+  padding: 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Encabezado */
+.app-header {
+  background-color: #b497ff;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding: 16px;
+  font-weight: bold;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 4px 10px rgba(180, 151, 255, 0.3);
+}
+
+/* Contenido principal */
+.finance-box {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+/* Título */
+.tab-title {
+  text-align: center;
+  color: #6a4ba8;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Etiquetas */
+label {
+  font-weight: 600;
+  color: #444;
+  margin-top: 6px;
+  display: block;
+}
+
+/* Campos */
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  border: 2px solid #c7a7ff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+  margin-top: 5px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #9d7aff;
+  box-shadow: 0 0 6px rgba(157, 122, 255, 0.4);
+}
+
+/* ----------------------------- */
+/* SECCIÓN RECORDATORIO */
+.reminder-section {
+  background-color: #f8f4ff;
+  border: 2px solid #c7a7ff;
+  border-radius: 14px;
+  padding: 16px 14px;
+  margin-top: 10px;
+  box-shadow: inset 0 2px 6px rgba(180, 151, 255, 0.1);
+  transition: 0.3s ease;
+}
+
+.reminder-section:hover {
+  box-shadow: 0 0 12px rgba(180, 151, 255, 0.25);
+}
+
+/* Checkbox principal */
+.reminder-section > label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #6a4ba8;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* Opciones de frecuencia */
+#frequency-options {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+  transition: 0.3s ease;
+}
+
+#frequency-options p {
+  margin: 0;
+  font-weight: 500;
+  color: #555;
+  font-size: 0.95em;
+}
+
+/* Opciones individuales */
+#frequency-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #333;
+  padding: 6px 10px;
+  background: #eee6ff;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+#frequency-options label:hover {
+  background: #d9c6ff;
+}
+
+/* Ocultar cuando está desactivado */
+.hidden {
+  display: none;
+}
+
+/* ----------------------------- */
+/* Botones de acción */
+button {
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Luz al pasar el mouse */
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+}
+
+button:hover::before {
+  left: 120%;
+}
+
+/* Botón morado */
+.btn-primary {
+  background: linear-gradient(135deg, #b497ff, #9d7aff);
+  box-shadow: 0 4px 10px rgba(155, 100, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #a882ff, #8b63ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(140, 90, 255, 0.35);
+}
+
+/* Íconos dentro del botón */
+button span.icon {
+  margin-right: 8px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+
+#frequency-options {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+#frequency-options:not(.hidden) {
+  max-height: 500px;
+  opacity: 1;
+}

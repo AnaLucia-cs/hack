@@ -1,0 +1,214 @@
+/* === Fondo general === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #f3ecff 0%, #e9e1ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* === Título superior === */
+.main-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #5c3ecf;
+  margin: 1rem 0 1.2rem 0;
+  letter-spacing: 0.8px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Contenedor principal (recuadro) con scroll === */
+.app-container {
+  width: 90%;
+  max-width: 420px;
+  height: 80vh;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.6s ease;
+  scrollbar-width: thin;
+  scrollbar-color: #b49cff #f0ebff;
+}
+
+/* === Scrollbar estilo moderno === */
+.app-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.app-container::-webkit-scrollbar-track {
+  background: #f0ebff;
+  border-radius: 10px;
+}
+
+.app-container::-webkit-scrollbar-thumb {
+  background-color: #b49cff;
+  border-radius: 10px;
+  border: 2px solid #f0ebff;
+}
+
+/* === Encabezado === */
+.app-header {
+  background: linear-gradient(135deg, #a47bff, #8054e0);
+  color: white;
+  text-align: center;
+  padding: 1.3rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+/* === Contenido interno === */
+.card-box {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* === Secciones === */
+.card-section {
+  background: #faf7ff;
+  border: 1px solid #e1d8ff;
+  border-radius: 15px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-section h2 {
+  color: #5d3fc4;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+/* === Info de tarjeta === */
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a3b78;
+}
+
+.card-icon {
+  font-size: 1.5rem;
+}
+
+/* === Inputs y labels === */
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #4a3b78;
+  font-weight: 500;
+}
+
+input[type="number"],
+input[type="checkbox"] {
+  padding: 0.6rem;
+  border: 1px solid #d1c5ff;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #8054e0;
+  box-shadow: 0 0 0 3px rgba(128, 84, 224, 0.2);
+}
+
+/* === Botones === */
+button {
+  width: 100%;
+  padding: 0.7rem;
+  background: linear-gradient(135deg, #8a5efb, #6f3bde);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #9c72ff, #7b4de5);
+  transform: translateY(-1px);
+}
+
+/* === Resultados === */
+#resultadoAhorro,
+#resultadoGastos {
+  margin-top: 0.8rem;
+  background: #f0ebff;
+  border-radius: 10px;
+  padding: 0.7rem;
+  font-weight: 500;
+  color: #4a3b78;
+  text-align: center;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+/* === Estilo especial para la tarjeta del usuario === */
+.user-card {
+  background: linear-gradient(135deg, #ede4ff, #e3d6ff);
+  border: 1px solid #cfc0ff;
+  border-radius: 18px;
+  padding: 1.2rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.user-card .card-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.user-card input[type="text"] {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid #cbb8ff;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.user-card input[type="text"]:focus {
+  border-color: #8054e0;
+  box-shadow: 0 0 0 3px rgba(128, 84, 224, 0.2);
+}
+
+/* === Resultado de la tarjeta guardada === */
+#tarjetaGuardada {
+  background: #f0ebff;
+  border-radius: 10px;
+  padding: 0.6rem;
+  color: #4a3b78;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+
+/* === Animación === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

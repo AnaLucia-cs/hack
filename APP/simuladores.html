@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simuladores Financieros</title>
+  <link rel="stylesheet" href="simuladores.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">Simuladores financieros</header>
+
+    <main class="sim-box">
+      <section class="sim-section">
+        <h2>Pagar a tiempo vs tarde</h2>
+        <div class="compare-box">
+          <label for="monto">Monto a pagar:</label>
+          <input type="number" id="monto" placeholder="$0.00" />
+
+          <label for="dias">Días de retraso:</label>
+          <input type="number" id="dias" placeholder="0" />
+
+          <button onclick="calcularPenalizacion()">Calcular penalización</button>
+          <div id="resultadoPenalizacion"></div>
+        </div>
+      </section>
+
+      <section class="sim-section">
+        <h2>Capacidad de endeudamiento</h2>
+        <div class="deuda-box">
+          <label for="ingreso">Ingreso mensual:</label>
+          <input type="number" id="ingreso" placeholder="$0.00" />
+
+          <label for="deuda">Deuda mensual:</label>
+          <input type="number" id="deuda" placeholder="$0.00" />
+
+          <button onclick="calcularCapacidad()">Evaluar capacidad</button>
+          <div id="resultadoCapacidad"></div>
+
+          <div class="escala">
+            <div class="nivel baja">Baja</div>
+            <div class="nivel media">Media</div>
+            <div class="nivel alta">Alta</div>
+          </div>
+          <button onclick="goHome()">🏠 Inicio</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="simuladores.js"></script>
+  </div>
+</body>
+</html>

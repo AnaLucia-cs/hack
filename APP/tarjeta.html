@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarjetas</title>
+  <link rel="stylesheet" href="tarjeta.css" />
+</head>
+<body>
+  <h1 class="main-title">    </h1>
+
+  <div class="app-container">
+    <header class="app-header">Gestor de Tarjetas</header>
+
+    <main class="card-box">
+
+      <!-- Tarjeta del usuario -->
+      <section class="card-section user-card">
+        <div class="card-info">
+          <span class="card-icon">💳</span>
+          <input
+            type="text"
+            id="nombreTarjeta"
+            placeholder="Escribe el nombre o número de tu tarjeta"
+          />
+        </div>
+        <div id="tarjetaGuardada"></div>
+        <button onclick="guardarTarjeta()">Guardar tarjeta</button>
+      </section>
+
+      <section class="card-section">
+        <label for="meta">Meta de ahorro:</label>
+        <input type="number" id="meta" placeholder="$0.00" />
+        <label for="actual">Progreso actual:</label>
+        <input type="number" id="actual" placeholder="$0.00" />
+        <progress id="barraAhorro" value="0" max="100"></progress>
+<button onclick="actualizarAhorro()">Actualizar progreso</button>
+
+      </section>
+
+      <section class="card-section">
+        <h2>Dividir gastos</h2>
+        <label for="transporte">Transporte:</label>
+        <input type="number" id="transporte" placeholder="$0.00" />
+        <label for="comida">Comida:</label>
+        <input type="number" id="comida" placeholder="$0.00" />
+        <label for="ninos">Niños:</label>
+        <input type="number" id="ninos" placeholder="$0.00" />
+        <button onclick="calcularGastos()">Calcular total</button>
+        <div id="resultadoGastos"></div>
+        <button onclick="goHome()" class="btn-primary">🏠 Inicio</button>
+      </section>
+
+    </main>
+
+    <script src="tarjeta.js"></script>
+  </div>
+</body>
+</html>
