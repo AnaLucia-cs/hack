@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retos Semanales</title>
+  <link rel="stylesheet" href="retos.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">Retos Semanales</header>
+
+    <main class="challenge-box">
+      <!-- Mensaje motivador -->
+      <div class="challenge-message">¡Vamos por tus retos!</div>
+
+      <!-- Meta semanal -->
+      <div class="goal-message">¡Ahorra $100 esta semana!</div>
+
+      <!-- Barra de progreso -->
+      <div class="progress-section">
+        <label for="progress-bar">Progreso:</label>
+        <div class="progress-bar-container">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- Agregar cantidad -->
+      <div class="add-progress">
+        <input type="number" id="inputCantidad" placeholder="Cantidad a agregar" />
+        <button id="agregarBtn" class="btn-primary"><span class="icon">➕</span>Agregar</button>
+      </div>
+
+      <!-- Mensaje de estado -->
+      <div id="estadoText" class="estado-text"></div>
+
+      <!-- Círculos de metas -->
+      <div class="progress-circuits" id="circuits-container"></div>
+
+      <!-- Estadísticas -->
+      <div class="stats">
+        <div class="stat"><span>🏆</span> <span id="retosCompletados">0</span>/5 retos</div>
+        <div class="stat"><span>⭐</span> Medalla</div>
+      </div>
+      <button onclick="goHome()" class="btn">🏠 Inicio</button>
+    </main>
+  </div>
+
+  <script src="retos.js"></script>
+</body>
+</html>
