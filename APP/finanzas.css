@@ -4,20 +4,20 @@ body {
   background-color: #f5f5f5;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px 0;
 }
 
 /* Contenedor principal */
 .app-container {
   background: linear-gradient(90deg, #c7a7ff, #d9def3, #e9d9ff);
   border-radius: 30px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   width: 90%;
-  max-width: 420px;
-  height: 90vh;
-  padding: 25px;
-  overflow-y: auto;
+  max-width: 380px;
+  padding: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -25,17 +25,17 @@ body {
 }
 
 .app-container:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Encabezado */
+/* Encabezado superior */
 .app-header {
   background-color: #b497ff;
   color: white;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
-  padding: 16px;
+  padding: 14px;
   font-weight: bold;
   border-radius: 20px 20px 0 0;
   box-shadow: 0 4px 10px rgba(180, 151, 255, 0.3);
@@ -44,20 +44,58 @@ body {
 /* Contenido principal */
 .finance-box {
   flex: 1;
-  padding: 24px;
+  padding: 18px 22px;
+}
+
+.finance-box form {
   display: flex;
   flex-direction: column;
+  gap: 14px;
+}
+
+/* Encabezado del formulario con icono */
+.tab-header {
+  position: relative;
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
-  gap: 18px;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Ícono de perfil en la esquina superior izquierda */
+.profile-icon.corner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.profile-icon.corner img {
+  width: 22px;
+  height: 22px;
+}
+
+.profile-icon.corner:hover {
+  background: #f3ecff;
+  transform: scale(1.08);
 }
 
 /* Título */
 .tab-title {
-  text-align: center;
   color: #6a4ba8;
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin: 0;
+  margin-left: 52px; /* espacio para el ícono */
 }
 
 /* Etiquetas */
@@ -68,7 +106,7 @@ label {
   display: block;
 }
 
-/* Campos */
+/* Campos de texto */
 input[type="text"],
 input[type="date"],
 input[type="number"] {
@@ -87,7 +125,6 @@ input:focus {
   box-shadow: 0 0 6px rgba(157, 122, 255, 0.4);
 }
 
-/* ----------------------------- */
 /* SECCIÓN RECORDATORIO */
 .reminder-section {
   background-color: #f8f4ff;
@@ -103,7 +140,6 @@ input:focus {
   box-shadow: 0 0 12px rgba(180, 151, 255, 0.25);
 }
 
-/* Checkbox principal */
 .reminder-section > label {
   display: flex;
   align-items: center;
@@ -121,7 +157,15 @@ input:focus {
   flex-direction: column;
   gap: 10px;
   padding-left: 10px;
-  transition: 0.3s ease;
+  transition: all 0.4s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+#frequency-options.show {
+  max-height: 500px;
+  opacity: 1;
 }
 
 #frequency-options p {
@@ -131,7 +175,6 @@ input:focus {
   font-size: 0.95em;
 }
 
-/* Opciones individuales */
 #frequency-options label {
   display: flex;
   align-items: center;
@@ -149,13 +192,7 @@ input:focus {
   background: #d9c6ff;
 }
 
-/* Ocultar cuando está desactivado */
-.hidden {
-  display: none;
-}
-
-/* ----------------------------- */
-/* Botones de acción */
+/* Botones */
 button {
   padding: 14px;
   font-size: 16px;
@@ -172,7 +209,6 @@ button {
   margin-top: 10px;
 }
 
-/* Luz al pasar el mouse */
 button::before {
   content: "";
   position: absolute;
@@ -189,7 +225,6 @@ button:hover::before {
   left: 120%;
 }
 
-/* Botón morado */
 .btn-primary {
   background: linear-gradient(135deg, #b497ff, #9d7aff);
   box-shadow: 0 4px 10px rgba(155, 100, 255, 0.3);
@@ -201,7 +236,6 @@ button:hover::before {
   box-shadow: 0 6px 16px rgba(140, 90, 255, 0.35);
 }
 
-/* Íconos dentro del botón */
 button span.icon {
   margin-right: 8px;
   font-size: 18px;
@@ -209,14 +243,8 @@ button span.icon {
 }
 
 
-#frequency-options {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-
 #frequency-options:not(.hidden) {
   max-height: 500px;
   opacity: 1;
+
 }
