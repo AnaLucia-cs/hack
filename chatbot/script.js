@@ -1,3 +1,4 @@
+const API_KEY = "AIzaSyCytGTEC6CAnrsnfKe-DBQMLANqsGV6abk"; // ⚠️ Pega aquí tu API key
 const MODEL = "gemini-pro"; // o "gemini-1.5-pro"
 
 const chatBox = document.getElementById("chat-box");
