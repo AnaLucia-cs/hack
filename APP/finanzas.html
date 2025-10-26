@@ -9,42 +9,57 @@
 </head>
 <body>
   <div class="app-container">
-    <header class="app-header">Finanzas</header>
+    <header class="app-header">
+      <h1>Finanzas</h1>
+    </header>
+
     <main class="finance-box">
-      <div class="tab-title">Registro financiero</div>
-
-      <label for="card">Tarjeta:</label>
-      <input type="text" id="card" placeholder="Nombre de la tarjeta" />
-
-      <label for="due-date">Fecha límite:</label>
-      <input type="date" id="due-date" />
-
-      <div class="reminder-section">
-        <label>
-          <input type="checkbox" id="reminder" onclick="toggleFrequency()" />
-          Recordatorio
-        </label>
-
-        <div id="frequency-options" class="hidden">
-          <p>¿Cada cuánto quieres tu recordatorio?</p>
-          <label><input type="checkbox" /> Cada día</label>
-          <label><input type="checkbox" /> Cada 2 días</label>
-          <label><input type="checkbox" /> Cada 3 días</label>
-          <label><input type="checkbox" /> Cada 4 días</label>
-          <label><input type="checkbox" /> 1 semana antes</label>
-          <label><input type="checkbox" /> 2 días antes</label>
-          <label><input type="checkbox" /> 1 día antes</label>
+      <form id="finance-form">
+        <!-- Encabezado con imagen de perfil -->
+        <div class="tab-header">
+          <a href="perfil.html" class="profile-icon corner" title="Ver perfil">
+            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Perfil">
+          </a>
+          <h2 class="tab-title">Registro financiero</h2>
         </div>
-      </div>
 
-      <label for="credits">Créditos:</label>
-      <input type="number" id="credits" placeholder="Cantidad de créditos" />
+        <label for="card">Tarjeta:</label>
+        <input type="text" id="card" placeholder="Nombre de la tarjeta" />
 
-      <label for="pending">Pago pendiente:</label>
-      <input type="number" id="pending" placeholder="Monto pendiente" />
+        <label for="due-date">Fecha límite:</label>
+        <input type="date" id="due-date" />
 
-      <button class="btn-primary"><span class="icon">💾</span>Guardar</button>
-      <button onclick="goHome()" class="btn-primary">🏠 Inicio</button>
+        <!-- SECCIÓN RECORDATORIO -->
+        <div class="reminder-section">
+          <label>
+            <input type="checkbox" id="reminder" onclick="toggleFrequency()" />
+            Recordatorio
+          </label>
+
+          <div id="frequency-options" class="hidden">
+            <p>¿Cada cuánto quieres tu recordatorio?</p>
+            <label><input type="checkbox" /> Cada día</label>
+            <label><input type="checkbox" /> Cada 2 días</label>
+            <label><input type="checkbox" /> Cada 3 días</label>
+            <label><input type="checkbox" /> Cada 4 días</label>
+            <label><input type="checkbox" /> 1 semana antes</label>
+            <label><input type="checkbox" /> 2 días antes</label>
+            <label><input type="checkbox" /> 1 día antes</label>
+          </div>
+        </div>
+
+        <label for="credits">Créditos:</label>
+        <input type="number" id="credits" placeholder="Cantidad de créditos" />
+
+        <label for="pending">Pago pendiente:</label>
+        <input type="number" id="pending" placeholder="Monto pendiente" />
+
+        <button type="submit" class="btn-primary">
+          <span class="icon">💾</span>Guardar
+        </button>
+
+        <button type="button" onclick="goHome()" class="btn-primary">🏠 Inicio</button>
+      </form>
     </main>
   </div>
 </body>
